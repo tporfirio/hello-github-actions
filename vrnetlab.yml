@@ -1,0 +1,7 @@
+---
+- name: Simple GitHub Action playbook
+  hosts: all
+  tasks:
+    - name: playbook task1
+      eos_command:
+        commands: show version
