@@ -11,7 +11,7 @@
   tasks:
     - name: playbook task1
       eos_command:
-        commands: show versionss
+        commands: show version
 
 #- name: Simple GitHub Action playbook
 #  hosts: ansible
