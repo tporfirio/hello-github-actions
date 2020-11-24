@@ -1,7 +1,29 @@
 ---
+
 - name: Simple GitHub Action playbook
-  hosts: all
+  hosts: ansible
+
+  vars: # Variável de conexão
+    ansible_connection: network_cli
+    ansible_network_os: eos
+    ansible_user: vrnetlab
+    ansible_ssh_pass: VR-netlab9
   tasks:
     - name: playbook task1
       eos_command:
-        commands: show version
+        commands: show versionss
+
+#- name: Simple GitHub Action playbook
+#  hosts: ansible
+  #gather_facts: false
+  
+#  vars: # Variável de conexão
+#    ansible_connection: network_cli
+#    ansible_network_os: eos
+#    ansible_user: vrnetlab
+#    ansible_ssh_pass: VR-netlab9
+
+#  tasks:
+#    - name: playbook task
+#      eos_command:
+#        command: hostname ve
